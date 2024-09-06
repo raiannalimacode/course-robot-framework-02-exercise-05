@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on darwin)" generated="2024-09-06T16:39:47.875771" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/Users/raiannalima/Documents/Programming/Courses/Robot-Framework-02-Exercicio-05/main/tests.robot">
+<test id="s1-t1" name="Entrar no site do Mercado Livre e ir na página de ofertas" line="20">
+<kw name="Abrir navegador e entrar no site do Mercado Livre">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-06T16:39:48.184585" level="INFO">Opening browser 'chrome' to base url 'https://www.mercadolivre.com.br/'.</msg>
+<arg>https://www.mercadolivre.com.br/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-06T16:39:48.184299" elapsed="3.925592"/>
+</kw>
+<status status="PASS" start="2024-09-06T16:39:48.183332" elapsed="3.927457"/>
+</kw>
+<kw name="Clicar na página de ofertas e validar página">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-06T16:39:52.115450" level="INFO">Clicking element '//a[contains(text(), "Ofertas")]'.</msg>
+<arg>${btn_offers}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-06T16:39:52.114034" elapsed="2.628219"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${tag_offer}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-06T16:39:54.742777" elapsed="0.053085"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-06T16:39:54.822372" level="INFO">Element '//span[@class="promotion-item__today-offer-text"]' is displayed.</msg>
+<arg>${tag_offer}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-06T16:39:54.796197" elapsed="0.026355"/>
+</kw>
+<status status="PASS" start="2024-09-06T16:39:52.112188" elapsed="2.710649"/>
+</kw>
+<kw name="Fechar o navegador">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-06T16:39:54.823837" elapsed="0.285135"/>
+</kw>
+<status status="PASS" start="2024-09-06T16:39:54.823404" elapsed="0.285749"/>
+</kw>
+<status status="PASS" start="2024-09-06T16:39:48.182549" elapsed="6.927020"/>
+</test>
+<status status="PASS" start="2024-09-06T16:39:47.878898" elapsed="7.231902"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
